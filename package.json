@@ -11,6 +11,7 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "babel-eslint": "^7.1.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
@@ -19,5 +20,43 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "rules": {
+      "no-unused-vars": [
+        "warn",
+        {
+          "vars": "all",
+          "args": "after-used"
+        }
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/no-unused-prop-types": [
+        1,
+        {
+          "skipShapeProps": true
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "config/webpack.config.dev.js"
+        }
+      }
+    }
   }
 }
