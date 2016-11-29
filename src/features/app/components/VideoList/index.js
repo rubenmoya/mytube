@@ -1,11 +1,6 @@
 import React, { PropTypes } from 'react';
-import styled from 'styled-components';
-import Video from './Video';
-
-const List = styled.section`
-  margin: 0 auto;
-  max-width: 900px;
-`;
+import List from './List';
+import Video from '../Video';
 
 const VideoList = (props) => {
   const videos = props.videos.map(video => <Video key={video.id.videoId} video={video} />);
