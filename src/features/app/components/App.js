@@ -1,15 +1,12 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Search from '../containers/Search';
+import VideoList from '../containers/VideoList';
 
-const App = props => (
-  <div className="App">
+const App = () => (
+  <div>
     <Search />
-    <p>{props.searchValue}</p>
+    <VideoList />
   </div>
 );
-
-App.propTypes = {
-  searchValue: PropTypes.string,
-};
 
 export default App;

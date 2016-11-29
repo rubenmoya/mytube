@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import App from '../components/App';
 
 const mapStateToProps = state => ({
-  searchValue: state.search.value,
+  videos: state.videos,
 });
 
 export default connect(mapStateToProps, null)(App);

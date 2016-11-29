@@ -1,12 +1,25 @@
+import { combineReducers } from 'redux';
 import * as ActionTypes from './constants';
 
-const searchBar = (state = { value: '' }, action) => {
+const value = (state = '', action) => {
   switch (action.type) {
     case ActionTypes.CHANGE_SEARCH_VALUE:
-      return Object.assign({}, state, { value: action.value });
+      return action.value;
     default:
       return state;
   }
 };
 
-export default searchBar;
+const videos = (state = [], action) => {
+  switch (action.type) {
+    case ActionTypes.RECEIVE_VIDEOS:
+      return action.videos;
+    default:
+      return state;
+  }
+};
+
+export default combineReducers({
+  value,
+  videos,
+});
