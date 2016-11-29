@@ -1,0 +1,11 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": "stylelint-config-standard",
+  "syntax": "scss",
+  "rules": {
+    "declaration-block-properties-order": "alphabetical",
+    "font-family-name-quotes": "always-where-recommended",
+    "string-quotes": "single",
+    "number-leading-zero": "never"
+  }
+}
