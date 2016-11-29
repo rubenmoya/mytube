@@ -1,10 +1,10 @@
 import React from 'react';
-import Search from '../containers/Search';
+import Header from '../containers/Header';
 import VideoList from '../containers/VideoList';
 
 const App = () => (
   <div>
-    <Search />
+    <Header />
     <VideoList />
   </div>
 );

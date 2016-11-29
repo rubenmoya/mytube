@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import Search from '../components/Search';
+import Header from '../components/Header';
 import { changeSearchValue, searchVideos } from '../state/actions';
 
 const mapDispatchToProps = dispatch => ({
-  handleChange: (value) => {
+  onChange: (value) => {
     dispatch(changeSearchValue(value));
     dispatch(searchVideos({ q: value }));
   },
 });
 
-export default connect(null, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(Header);
