@@ -10,7 +10,7 @@ const Header = ({ onChange }) => {
   return (
     <Wrapper>
       <Logo><i className="fa fa-youtube-play" /></Logo>
-      <SearchInput type="text" onChange={handleChange} placeholder="Search a video... " />
+      <SearchInput type="text" onChange={handleChange} placeholder="Search a video... " className="js-searchInput" />
     </Wrapper>
   );
 };
